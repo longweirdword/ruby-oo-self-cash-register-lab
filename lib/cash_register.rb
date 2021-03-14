@@ -16,8 +16,8 @@ attr_accessor :total, :discount, :last_item
 
     def apply_discount
         if @discount > 0
-        @total = @total - @total * @discount / 100.00
-        @total = @total.to_i if @total == @total.to_i 
+        self.total = @total - @total * @discount / 100.00
+        self.total = @total.to_i if @total == @total.to_i 
         "After the discount, the total comes to $#{@total}."
         else 
         "There is no discount to apply."
